@@ -36,7 +36,7 @@ uploaded_file = st.sidebar.file_uploader("Upload Dashcam Video (.mp4)", type=['m
 # This downloads the model automatically on first run
 @st.cache_resource
 def load_model():
-    return YOLO('yolov8n.pt')
+    return YOLO('yolov8m.pt')
 
 try:
     model = load_model()
@@ -110,3 +110,4 @@ if uploaded_file is not None:
     cap.release()
 else:
     st.info("👈 Waiting for video upload...")
+
